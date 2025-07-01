@@ -35,11 +35,16 @@ import { createContext } from 'react'
 import { UserContext,  UserProvider } from './components/UserContext'
 import UserProfile from './components/UserProfile'
 import UpdateUser from './components/UpdateUser'
+// import CounterRe from './components/CounterRe'
+import FocustInput from './components/FocustInput'
+import Timer from './components/Timer'
+import CustomHookExample from './components/customHookExample'
+import UseId from './components/UseId'
 
 export  const Data = createContext();
 export const  Data1 = createContext();
 
-const inititalState = {count: 0};
+const initialState = {count: 0};
 
 //useReducer 
 const reducer = (state, action) => {
@@ -64,7 +69,7 @@ const reducer = (state, action) => {
 const App = () => {
     const [count, setCount] = useState(0);
     const [data, setData] = useState([]);
-    const [state, action] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState);
     
 
    //  useEffect(() => {
@@ -165,9 +170,25 @@ const App = () => {
         </UserProvider> */}
 
         {/* useReducer hook in react */}
+        {/* <button onClick={() => dispatch({type: 'increment'})}>+</button>
+        <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+        <button onClick={() => dispatch({type: 'reset'})}>reset</button>
+        <h1>Count: {state.count}</h1> */}
+
+        {/* one more practice of useReducer */}
+        {/* <CounterRe /> */}
+
+        {/* use ref in react- current.focus */}
+        {/* <FocustInput />  practice 1*/}
+        {/* Timer */}
+        {/* <Timer /> */}
         
-        <h1>Count: {state.count}</h1>
-        
+        {/* custom hook in react */}
+        {/* <CustomHookExample />  */}
+         {/* UseFetch is a custom hook that we designed */}
+
+        {/* useIdHook in react */}
+        {/* <UseId /> */}
 
 
      </section>
