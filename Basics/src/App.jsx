@@ -40,6 +40,7 @@ import FocustInput from './components/FocustInput'
 import Timer from './components/Timer'
 import CustomHookExample from './components/customHookExample'
 import UseId from './components/UseId'
+import Testimonial from '../../projects/src/Components/Testimonial'
 
 export  const Data = createContext();
 export const  Data1 = createContext();
@@ -189,7 +190,7 @@ const App = () => {
 
         {/* useIdHook in react */}
         {/* <UseId /> */}
-
+       
 
      </section>
    
