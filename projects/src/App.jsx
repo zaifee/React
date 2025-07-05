@@ -6,6 +6,8 @@ import Calculator from './Components/Calculator'
 import ToggleBackgroundColor from './Components/ToggleBackgroundColor'
 import HiddenSearchBar from './Components/HiddenSearchBar'
 import Testimonial from './Components/Testimonial'
+import { accordionData } from '../utils/content'
+import Accordian from './Components/Accordian'
 
 const App = () => {
   return (
@@ -16,7 +18,12 @@ const App = () => {
       {/* <Calculator /> */}
       {/* <ToggleBackgroundColor /> */}
       {/* <HiddenSearchBar /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
+      <div className="accordion">
+        {accordionData.map(({title, content}) => (
+          <Accordian title={title} content={content}/>
+        ))}
+      </div>
     </div>
   )
 }
